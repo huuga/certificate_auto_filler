@@ -4,7 +4,7 @@ from openpyxl import load_workbook
 wb = load_workbook('./Конкурсанты Абилимпикс 2022.xlsx')
 sheet = wb[wb.sheetnames[0]]
 
-for i in range(8, 9):
+for i in range(1, sheet.max_row):
     last_name = sheet.cell(row=i, column=1).value
     if last_name:
         last_name = last_name.upper()
